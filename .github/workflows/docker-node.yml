@@ -21,7 +21,7 @@ jobs:
     - run: npm ci
     - run: npm test
 
-  buikd:
+  build:
     runs-on: ubuntu-latest
     environment: development
     needs: [ test ]
