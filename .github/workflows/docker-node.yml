@@ -25,6 +25,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Docker build to registry
       env:
-        REPOSITORY: express-api
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REPOSITORY: ${{ vars.REPOSITORY }}
         IMAGE_TAG: ${{ github.sha }}
-      run: docker build -t $REPOSITORY:$IMAGE_TAG .
+      run: docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
