@@ -2,7 +2,7 @@ name: Docker Image Express
 
 on:
   push:
-    branches: [ deploy-ecs ]
+    branches: [ reusables-workflows ]
 
 permissions:
   id-token: write
